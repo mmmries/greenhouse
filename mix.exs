@@ -41,6 +41,8 @@ defmodule Greenhouse.MixProject do
       {:toolshed, "~> 0.2"},
 
       # Dependencies for all targets except :host
+      {:ads1115, "~> 0.1.0"},
+      {:circuits_gpio, "~> 0.4"},
       {:nerves_runtime, "~> 0.6", targets: @all_targets},
       {:nerves_init_gadget, "~> 0.4", targets: @all_targets},
 

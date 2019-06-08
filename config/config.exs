@@ -55,11 +55,38 @@ config :nerves_firmware_ssh,
 node_name = if Mix.env() != :prod, do: "greenhouse"
 
 config :nerves_init_gadget,
-  ifname: "usb0",
+  ifname: "wlan0",
   address_method: :dhcpd,
-  mdns_domain: "nerves.local",
+  mdns_domain: "greenhouse.local",
   node_name: node_name,
   node_host: :mdns_domain
+
+
+config :nerves_network, regulatory_domain: "US"
+
+config :nerves_network, :default,
+   wlan0: [
+    networks: [
+      [
+        priority: 3,
+        ssid: System.get_env("HOME_SSID"),
+        psk: System.get_env("HOME_PSK"),
+        key_mgmt: :"WPA-PSK"
+      ],
+      [
+        priority: 2,
+        ssid: System.get_env("WORK_SSID"),
+        psk: System.get_env("WORK_PSK"),
+        key_mgmt: :"WPA-PSK"
+      ],
+      [
+        priority: 1,
+        ssid: System.get_env("PHONE_SSID"),
+        psk: System.get_env("PHONE_PSK"),
+        key_mgmt: :"WPA-PSK"
+      ]
+    ]
+  ]
 
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

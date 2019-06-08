@@ -1,5 +1,8 @@
 %{
+  "ads1115": {:hex, :ads1115, "0.1.0", "8fa0e11890b989f901ee7fef2297e2d5b7f0aa7d088afe64726a709e9a4eeb4a", [:mix], [{:circuits_i2c, "~> 0.3", [hex: :circuits_i2c, repo: "hexpm", optional: false]}], "hexpm"},
   "artificery": {:hex, :artificery, "0.4.2", "3ded6e29e13113af52811c72f414d1e88f711410cac1b619ab3a2666bbd7efd4", [:mix], [], "hexpm"},
+  "circuits_gpio": {:hex, :circuits_gpio, "0.4.1", "344dd34f2517687fd28723e5552571babff5469db05b697181cab860fe7eff23", [:make, :mix], [{:elixir_make, "~> 0.5", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
+  "circuits_i2c": {:hex, :circuits_i2c, "0.3.4", "d86951092e44487fe6fecbd6544511d894510be2856280eb93258a171bdc1552", [:make, :mix], [{:elixir_make, "~> 0.5", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "distillery": {:hex, :distillery, "2.0.12", "6e78fe042df82610ac3fa50bd7d2d8190ad287d120d3cd1682d83a44e8b34dfb", [:mix], [{:artificery, "~> 0.2", [hex: :artificery, repo: "hexpm", optional: false]}], "hexpm"},
   "dns": {:hex, :dns, "2.1.2", "81c46d39f7934f0e73368355126e4266762cf227ba61d5889635d83b2d64a493", [:mix], [{:socket, "~> 0.3.13", [hex: :socket, repo: "hexpm", optional: false]}], "hexpm"},
   "elixir_make": {:hex, :elixir_make, "0.5.2", "96a28c79f5b8d34879cd95ebc04d2a0d678cfbbd3e74c43cb63a76adf0ee8054", [:mix], [], "hexpm"},
