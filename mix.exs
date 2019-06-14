@@ -35,16 +35,18 @@ defmodule Greenhouse.MixProject do
   defp deps do
     [
       # Dependencies for all targets
+      {:influx_udp, "~> 1.0"},
       {:nerves, "~> 1.4", runtime: false},
       {:shoehorn, "~> 0.4"},
       {:ring_logger, "~> 0.6"},
       {:toolshed, "~> 0.2"},
 
       # Dependencies for all targets except :host
-      {:ads1115, "~> 0.1.0"},
-      {:circuits_gpio, "~> 0.4"},
+      {:ads1115, "~> 0.1.0", targets: @all_targets},
+      {:circuits_gpio, "~> 0.4", targets: @all_targets},
       {:nerves_runtime, "~> 0.6", targets: @all_targets},
       {:nerves_init_gadget, "~> 0.4", targets: @all_targets},
+      {:nerves_time, "~> 0.2", targets: @all_targets},
 
       # Dependencies for specific targets
       {:nerves_system_rpi, "~> 1.6", runtime: false, targets: :rpi},
